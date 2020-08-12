@@ -5,7 +5,7 @@ categories: ROS
 ---
 
 # 목적
-Intel Realsense 카메라를 처음으로 ROS 상에서 작동시켜서 화면에 카메라의 영상과 깊이 정보를 표시하기
+Intel Realsense 카메라를 처음으로 ROS 상에서 작동시켜서 화면에 카메라의 영상과 깊이 정보를 표시하기.
 
 # 실행 환경
 아래 방법은 다음의 실행 환경에서 수행되었습니다.   
@@ -13,7 +13,8 @@ Ubuntu 18.04, ROS melodic, realsense SDK, realsense ROS wrapper, D435i depth cam
 실행 환경이 다를 경우 아래 방법이 잘 되지 않을 수도 있습니다.
 
 # 방법
-다음의 두 가지 방법 모두 가능하며, 한 방법을 선택해서 실행할 것.
+다음의 두 가지 방법 모두 가능하며, 한 방법을 선택해서 실행할 것.   
+리얼센스 관련 소프트웨어가 모두 설치가 되어 있어야 하며, 설치 방법은 리얼센스 사이트를 참조.   
 
 ## A. Point cloud 영상 보기
 1. realsense sdk가 설치된 상태에서, D435i 같은 센서를 PC에 연결.
