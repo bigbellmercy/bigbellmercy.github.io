@@ -21,7 +21,7 @@ Ubuntu 18.04, ROS melodic, realsense SDK, realsense ROS wrapper, D435i depth cam
 2. 새 터미널에서 roscore 실행:
 > roscore
 3. 된 상태에서, 새 터미널에서 다음 명령을 실행:
-> roslaunch realsense2_camera rs_camera.launch align_depth:=true
+> roslaunch realsense2_camera rs_camera.launch filters:=pointcloud
 4. 새 터미널에서 rviz(시각화 도구)를 실행:
 > rviz
 5. rviz의 Displays 영역에서 Global Options/Fixed Frame이 map이 아닌 camera_link이어야 함.
