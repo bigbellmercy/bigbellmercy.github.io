@@ -18,4 +18,4 @@ categories: ROS
 그 ROS SW의 Launch 폴더에 있는 해당 .launch 파일 속에 다음 문장을 적는다:
 > &lt;remap from="image" to ="/usb_cam/image_raw" /&gt;
    
-이렇게 하면, 이 SW는 /image라는 주제를 받는 대신에, /usb_cam/image_raw 주제를 받아 들인다. 이 방법은 위 방법보다 더 처리가 빠르다.
+이렇게 하면, 이 SW는 /image라는 주제 대신에, /usb_cam/image_raw 주제를 사용한다(구독(subscribe)하거나 출판(publish)한다). 이 방법은 위 방법보다 더 처리가 빠르다.
