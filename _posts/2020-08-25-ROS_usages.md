@@ -16,6 +16,6 @@ categories: ROS
 한 주제(topic)의 이름을 바꾸는 이유는, 새로운 이름을 갖는 주제를 가지고 다른 소프트웨어(SW)에서 쓰기 위함이다.
 따라서, 이름을 바꿀 필요 없이, 그 주제(topic)를 사용하는 ROS SW에서, 다음 문장을 이용해서, 바꾸기 전의 이름 그대로 쓰도록 설정하는 방법이다.
 그 ROS SW의 Launch 폴더에 있는 해당 .launch 파일 속에 다음 문장을 적는다:
-> &lt;remap from="image" to ="/usb_cam/image_raw" /&gt;
+> &lt;remap from="image" to="/usb_cam/image_raw" /&gt;
    
 이렇게 하면, 이 SW는 /image라는 주제 대신에, /usb_cam/image_raw 주제를 사용한다(구독(subscribe)하거나 출판(publish)한다). 이 방법은 위 방법보다 더 처리가 빠르다.
