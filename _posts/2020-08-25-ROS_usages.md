@@ -26,7 +26,7 @@ categories: ROS
 
 ## Launch 파일 속에서 Parameter 값 바꾸기
 파라미터의 값을 바꾸려면 Launch 파일 속에서 다음의 예처럼 적는다.
-> &lt;param name="enable_pose_jumping" type="bool" value="False" /&gt
+> &lt;param name="enable_pose_jumping" type="bool" value="False" /&gt;
    
 만약, 파라미터의 경로가 기본 경로와 다르다면 아래처럼 전체 경로를 지정할 수 있다.
-> &lt;param name="/camera/tracking_module/enable_pose_jumping" type="bool" value="False" /&gt
+> &lt;param name="/camera/tracking_module/enable_pose_jumping" type="bool" value="False" /&gt;
