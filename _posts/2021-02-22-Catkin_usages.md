@@ -6,6 +6,12 @@ categories: ROS
 
 # Catkin 빌드 방식의 두 종류
 Catkin의 소스 코드를 빌드하는 방법(명령)이 여러가지가 있는데, 한번 사용하면 같은 방식만 쓸 수 있음. 하나는 `catkin build`이고, 다른 하나는 `catkin_make`임. 또, `catkin_make_isolated`도 있음.
+
+PX4.io에서는 `catkin_make`보다 `catkin build`(catkin_tools)를 추천하고 있음.
+`catkin build`가 `catkin_make`보다 나은 이유는 'the isolated environment'를 지원하기 때문이라고 하는데(아래 링크 참조), `catkin_make_isolated`를 따로 안써도 `catkin build`로 해결이 되는 것 같음. 
+https://robotics.stackexchange.com/questions/16604/ros-catkin-make-vs-catkin-build#:~:text=catkin%20build%20can%20be%20used,no%2Ddeps%20to%20skip%20dependencies.
+   
+`catkin build` 쓸 때, 패키지 하나만 빌드하려면 `catkin build package_name` 이런 식으로 명령하면 
    
 특정 ROS 패키지가 둘 중의 어느 하나에서만 빌드가 된다면, catkin_ws 말고 그 옆에 catkin_ws2 이런식으로 폴더를 하나 더 만들고, 다른 빌드 방식으로 빌드를 해 보면 될 수 있음.
 
