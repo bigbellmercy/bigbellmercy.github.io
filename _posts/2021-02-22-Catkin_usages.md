@@ -5,7 +5,7 @@ categories: ROS
 ---
 
 # Catkin 빌드 방식의 두 종류
-Catkin의 소스 코드를 빌드하는 방법이 여러가지가 있는데, 하나는 `catkin buil`이고, 다른 하나는 `catkin_make`임. 또, `catkin make`인가도 있음.
+Catkin의 소스 코드를 빌드하는 방법(명령)이 여러가지가 있는데, 한번 사용하면 같은 방식만 쓸 수 있음. 하나는 `catkin build`이고, 다른 하나는 `catkin_make`임. 또, `catkin make`인가도 있음.
    
 특정 ROS 패키지가 둘 중의 어느 하나에서만 빌드가 된다면, catkin_ws 말고 그 옆에 catkin_ws2 이런식으로 폴더를 하나 더 만들고, 다른 빌드 방식으로 빌드를 해 보면 될 수 있음.
 
