@@ -13,7 +13,7 @@ https://robotics.stackexchange.com/questions/16604/ros-catkin-make-vs-catkin-bui
 
 # 유용한 사용법
 
-`catkin build` 쓸 때, 패키지 하나만 빌드하려면 `catkin build package_name` 이런 식으로 명령하면 
+`catkin build` 쓸 때, 패키지 하나만 빌드하려면 `catkin build package_name` 이런 식으로 명령하면 됨.
    
 특정 ROS 패키지가 둘 중의 어느 하나에서만 빌드가 된다면, catkin_ws 말고 그 옆에 catkin_ws2 이런식으로 폴더를 하나 더 만들고, 다른 빌드 방식으로 빌드를 해 보면 될 수 있음.
 
