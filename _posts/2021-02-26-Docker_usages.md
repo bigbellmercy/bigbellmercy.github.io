@@ -13,7 +13,11 @@ Docker[다커/도커]라는 소프트웨어는 우분투(Ubuntu) 등의 리눅�
 `sudo docker search ubuntu`
 
 # Image 설치 명령
-인터넷에서 원하는 이미지를 내 컴퓨터에 받아서 설치하는 명령이다. 아래 예는, ubuntu 이미지 중에서 bionic(18.04) 태그(tage)를 지정하여 설치하는 방법이고, :bionic은 생략 가능하다.  
+인터넷에서 원하는 이미지를 내 컴퓨터에 받아서 설치하는 명령이다. 아래 예는, ubuntu 이미지를 설치하는 명령이다.  
+`sudo docker pull ubuntu`  
+
+위 명령은 태그(tag)(일종의, 버전)를 지정하지 않았기에, 가장 최근(latest)의 버전을 설치한다.  
+아래는 bionic(Ubuntu 18.04) 태그(tage)를 지정하여 설치하는 방법이다.  
 `sudo docker pull ubuntu:bionic`
 
 # 설치된 Image 목록 보기 명령
