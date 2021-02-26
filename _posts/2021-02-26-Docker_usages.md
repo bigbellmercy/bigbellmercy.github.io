@@ -1,7 +1,7 @@
 ---
 title: "Docker 유용한 사용법들"
-date: 2021-2-22 15:33:00 +09:00
-categories: ROS
+date: 2021-2-26 11:54:00 +09:00
+categories: Docker
 ---
 
 # Docker란?
