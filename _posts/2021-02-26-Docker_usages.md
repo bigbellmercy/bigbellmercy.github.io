@@ -25,9 +25,10 @@ Docker[다커/도커]라는 소프트웨어는 우분투(Ubuntu) 등의 리눅�
 `sudo docker images`
 
 # Image 실행 명령
-아래 예는, ubuntu라는 이미지를 실행하여 컨테이너(container)를 하나 만든다. 여기서, -it는 interactive, tty의 옵션으로서, 생략 가능하다.
-참고로, 하나의 같은 이미지로 여러 컨테이너들을 따로 실행하는 것이 가능하다.  
+아래 예는, ubuntu라는 이미지를 실행하여 컨테이너(container)를 하나 만든다. 여기서, -it는 interactive, tty(text)의 옵션인데, 이게 없으면 컨테이너가 만들어졌다가 바로 종료된다.  
 `sudo docker run -it ubuntu`
+
+참고로, 하나의 같은 이미지로 여러 컨테이너들을 따로 실행하는 것이 가능하다.
 
 # 실행 중인 Container 목록 보기 명령
 실행 중인 컨테이너들의 목록을 본다.  
