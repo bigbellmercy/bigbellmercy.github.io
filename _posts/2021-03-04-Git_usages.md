@@ -12,17 +12,19 @@ categories: Git
 연속된 커밑 버전들이 순서대로 나열되면 마치 긴 가지처럼 생기는데 이를 브랜치(branch)라고 부른다. 하나의 브랜치의 중간의 어떤 커밑에서 새로운 브랜치가 파생될 수 있다.
 이렇게 되면 하나의 소프트웨어 프로젝트에 여러 개의 브랜치들이 생길 수 있다.
 각 커밑에는 십육진수의 고유한 번호가 붙고, 원하면 글로 된 이름을 붙일 수 있으며 이를 태그(tag)(꼬리표)라 부른다. 태그에 v1.0.1과 같은 버전 번호를 붙이기도 한다.
-브랜치에는 반드시 이름을 붙여야 한다. 최초의 브랜치의 이름은 보통 master이다.
+브랜치에는 반드시 이름을 붙여야 한다. 최초의 브랜치의 이름은 보통 master 또는 origin이다.
 
 # 저장소(repository)에서 소스 코드 내려 받기
 아래의 명령처럼 인터넷 상에 있는 저장소의 주소를 적으면 현재 폴더 아래에 새 폴더가 만들어지고 소스 코드가 받아진다. 
 >git clone https://github.com/PX4/PX4-Autopilot.git
 
 # 저장소로부터 소스 코드 갱신하기
-저장소로부터 추가된 소스 코드를 받아 현재 폴더의 프로그램을 새롭게 갱신할 수 있다. 
->git fetch
+이미 컴퓨터에 소스 코드를 내려 받은 이후에도, 다시 저장소로부터 추가된 소스 코드들을 받아 현재 폴더를 갱신할 수 있다.
+소스 코드의 최상위 폴더에서,다음 명령을 실행한다(이후, 이 문장은 생략함).
+>git checkout master 또는 orign
+>git pull
 
-# 브랜치(branch) 목록 보기
+# 브랜치 목록 보기
 다음 명령으로 브랜치들의 이름이 나열되며 현재 선택된 브랜치 이름의 왼쪽에 별표(`*`)가 표시된다.
 만약 목록이 길다면 스페이스 키를 누르고 그만 보려면 q 키를 누른다.
 >git branch
@@ -59,33 +61,12 @@ categories: Git
 # 현재의 프로그램 수정 상태 보기
 아래 명령으로 현재 브랜치에서 어떤 파일들이 변경되었는지를 알 수 있다.
 >git status
-
-아래에서, `Changes not staged for commit:`는 코드가 바뀌었지만 아직 Staged(커밑 대상으로 등록된)되지 않은 파일들을 보여준다.
-`Untracked files`는 새로운 파일이 생겼지만 수정 사항이 추적(track)되지 않고 있는 파일들을 보여준다. 
+표시된 파일들의 목록에는 다음과 같은 구분이 있다.
+`Changes not staged for commit:` 코드가 바뀌었지만 아직 Staged(커밑 대상으로 등록된)되지 않은 파일들을 보여준다.
+`Untracked files`: 새로운 파일이 생겼지만 수정 사항이 추적(track)되지 않고 있는 파일들을 보여준다. 
 상기의 파일들은 `git add` 명령으로 커밑 전에 해당 파일들을 추적 및 등록할 수 있고, 추적 또는 등록(staged)하지 않고 내버려 둔채 커밑할 수도 있다.
 
-```
-On branch master
-Your branch is behind 'origin/master' by 1244 commits, and can be fast-forwarded.
-  (use "git pull" to update your local branch)
-
-Changes not staged for commit:
-  (use "git add/rm <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-  (commit or discard the untracked or modified content in submodules)
-
-	deleted:    .vscode/cmake-kits.json
-	modified:   Tools/jMAVSim (new commits)
-	modified:   Tools/sitl_gazebo (new commits)
-	modified:   mavlink/include/mavlink/v2.0 (new commits)
-	modified:   src/drivers/uavcan/libuavcan (untracked content)
-	modified:   src/lib/ecl (new commits)
-	modified:   src/lib/matrix (new commits)
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-
-	msg/tools/gencpp/
-	msg/tools/genmsg/
-	src/lib/DriverFramework/
-```
+# 파일을 커밑하도록 등록(staging)하기
+모든 새로운 또는 수정된 파일들을 커밑하도록 등록하려면 아래 명령을 쓴다.
+> git add -all
+만약, 특정 파일들만 등록하려면 `-all` 대신에 파일 이름들을 적는다.
