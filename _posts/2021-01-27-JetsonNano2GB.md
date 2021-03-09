@@ -34,6 +34,4 @@ JetsonNano 2GB는 운영체제가 Ubuntu가 아니라 LXDE 18.04를 쓰므로 �
 웍스페이스(workspace)라는 기능을 쓰면 가상으로 여러 화면(screen)을 만들어 옮겨 다니며 쓸 수 있다.
 시작 키를 누르고 apperance라는 검색어로 Appearance 앱을 실행한 뒤에, Behavior 탭에서 Enable workspaces를 활성화한다.
 이렇게 하면 화면의 왼쪽 세로 메뉴 줄에 웍스페이스 아이콘이 나타나고 누르면 여러 화면들이 나타나고, 원하는 창을 끌어서 다른 화면으로 옮길 수 있으며, 원하는 웍스페이스 화면을 누르면 그 화면이 나타난다.
-
-
-
+웍스페이스들을 옮겨다니는 단축키는 Ctrl + Alt + Left 또는 Right 화살표 키로 왼쪽/오른쪽으로 이동할 수 있고, Super (시작키) + Page Up 또는 Down으로 위/아래로 이동할 수 있다. 위/아래 이동도 Ctrl + Alt + Up / Down으로 바꾸고 싶다면, 'Keyboard' 설정에서 Navigation의 맨 아래 항목들에서 바꿀 수 있다.
