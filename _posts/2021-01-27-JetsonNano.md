@@ -3,6 +3,8 @@ title: "JetsonNano 사용 관련"
 date: 2021-1-27 01:21:00 +09:00
 categories: JetsonNano
 ---
+# Jetson Nano의 개요
+Jetson Nano는 컴퓨터 그래픽 카드 제품으로 유명한 Nvidia[앤비디아] 사가 개발한 초소형 컴퓨터이다. 이 컴퓨터에는 Nvidia 사의 GPU(Graphic Processeing Unit, 그래픽 처리 장치)를 내장하고 있어서, '인공 신경망'(artificial neural network)을 빨리 처리할 수 있는 특징을 갖고 있다. Jeton Nano Devlopment Kit는 이 젯슨 나노의 보드를 캐리어 보드에 장착하여 판매되는 제품이며, 캐리어 보드에는 각종 커넥터들이 제공된다. 젯슨 나노의 기본 운영체제(OS)로는 Ubuntu 18.04가 설치되어 있고, Desktop Environment로는 Unity가 설치된다.
 
 # Jetson Nano의 종류
 Jetson Nano는 두 가지가 있는데, 하나는 원래의 제품으로서 메모리가 4GB인 제품이고, 다른 하나는 가격을 낮춘 제품으로서 메모리가 2GB인 제품이다.   
