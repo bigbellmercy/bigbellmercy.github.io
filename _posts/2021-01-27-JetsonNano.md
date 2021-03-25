@@ -49,4 +49,4 @@ JetsonNano 2GB는 운영체제가 Ubuntu가 아니라 LXDE 18.04를 쓰므로 �
 4. 이 장치 이름을 가지고, `sudo dd if=/dev/sdb1 of=~/sd.img`처럼 명령하면, 시간이 지난 뒤에 `sd.img`라는 이름으로 컴퓨터의 홈 폴더에 SD 카드의 이미지 파일이 저장된다. 이제, SD 카드를 분리한다.
 5. 이렇게 저장된 이미지를 새로운 SD 카드에 복제하려면, 새로운 SD 카드를 연결하고, `sudo fdisk -l` 명령으로 장치 이름을 알아 내는데, 장치 이름을 잘 못 알아내면 엉뚱한 하드 디스크 등에 덮어 써질 수 있으므로 무척 신중하게 확인해야 한다.
 6. 예를 들어, 장치 이름이 `/dev/sda1`라면, `sudo umount /dev/sda1` 명령으로 장치를 언마운트 시킨다.
-7. `sudo dd if=~/sd.img of=/dev/sdb1` 명령을 쓰면, 수십분이 지난  `sd.img` 이미지 파일이 `/dev/sda1`의 SD 카드에 복제된다.
+7. `sudo dd if=~/sd.img of=/dev/sdb1` 명령을 쓰면, 수십분이 지난 뒤에, `sd.img` 이미지 파일이 `/dev/sda1`의 SD 카드에 복제된다.
