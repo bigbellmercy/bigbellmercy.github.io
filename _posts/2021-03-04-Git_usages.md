@@ -24,8 +24,12 @@ categories: Git
 >git checkout master 또는 orign   
 >git pull
 
-그러나, 폴더 아래에 서브모듈(submodule)들이 있는 경우에는 아래 명령으로 서브모듈들도 최신으로 갱신할 수 있다.
+## 서브모듈을 최신으로 갱신하기
 서브모듈이란 git로 버전 관리되는 저장소의 하위 폴더들 중에 별도로 git로 버전 관리가 되는 폴더들을 말한다.
+저장소의 폴더 속에는 역시 Git로 이력 관리되는 서브모듈(submodule)들이 있을 수 있다.
+아래 두 명령들을 실행하면 서브모듈들을 최신으로 갱신할 수 있다.
+>git submodule sync --recursive
+>git submodule update --init --recursive
 >git submodule update --init --recursive
 
 
@@ -75,3 +79,4 @@ categories: Git
 모든 새로운 또는 수정된 파일들을 커밑하도록 등록하려면 아래 명령을 쓴다.
 > git add -all
 만약, 특정 파일들만 등록하려면 `-all` 대신에 파일 이름들을 적는다.
+
