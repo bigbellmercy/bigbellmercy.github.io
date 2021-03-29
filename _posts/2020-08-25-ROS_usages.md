@@ -4,6 +4,13 @@ date: 2020-8-25 16:40:00 +09:00
 categories: ROS
 ---
 
+# 실행 환경 설정 기본 사항
+ROS 설치가 끝난 뒤에는 사용자 home 폴더의 `.bashrc` 파일에 다음 두 줄을 넣어 주는 것이 다. 그렇지 않으면 매번 터미널에서 아래 두 줄을 실행해야 한다.
+> source /opt/ros/melodic/setup.bash  
+> source ~/catkin_ws/devel/setup.bash
+
+이때, 위 경로들에는 실제 맞는 경로로 넣어 줘야 한다. 첫 줄은 `apt-get`으로 설치한 ROS 패키지에 해당하고, 둘째 줄은 소스 코드로 설치한 ROS 패키지들에 해당한다.
+
 # ROS Topic 이름 바꾸기
 
 ## 명령줄(command line)에서 바로 바꾸고 싶다면
@@ -53,3 +60,5 @@ master가 되는 컴퓨터에서는, 사용자 home 폴더의 `.bashrc` 파일�
 
 master가 아닌 컴퓨터에서는, 사용자 home 폴더의 `.bashrc`를 열고 다음을 추가한다. 여기서, IP 주소는 master 컴퓨터의 주소이다.
 > export ROS_MASTER_URI=http://192.40.1.123:11311
+
+위와 같이 설정한 뒤에는, 컴퓨터를 재시작하거나, 새로운 터미널에서 노드를 실행해야 한다. 
