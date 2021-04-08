@@ -160,3 +160,7 @@ drwxr-xr-x  9 user user         4096 Feb  2 14:59  Documents
 ## `apt` 명령으로 설치된 프로그램 찾기
 다음 명령으로, 예를 들어 `program_name`이라는 말이 들어가는 프로그램이 설치되어 있는지를 알 수 있다.
 > apt list --installed | grep program_name
+
+## Ubuntu Kernel 버전 알기
+다음 버전으로 우분투 커넬 버전을 알 수 있다.
+> uname -r
