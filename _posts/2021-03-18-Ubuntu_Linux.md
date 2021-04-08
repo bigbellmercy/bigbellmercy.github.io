@@ -156,3 +156,7 @@ drwxr-xr-x  9 user user         4096 Feb  2 14:59  Documents
 3. 아래 명령을 쓰면, 시간이 지난 뒤에, `sd.img` 이미지 파일이 `/dev/sdb`의 SD 카드에 복제된다. 여기서, `bs=1M`는 생략 가능하지만 적으면 속도가 빨라진다.
 > sudo dd if=~/sd.img of=/dev/sdb bs=1M status=progress
 4. 복제가 끝난 뒤에, SD 카드를 바로 빼지 말고, 시간이 2~3 분 지난 뒤에, 탐색기에서 이 드라이브에서 Unmount나 Eject를 누르고, 빼도 좋다는 문구가 나오면 그 때 뺀다. 왜냐하면, 이렇게 정상적으로 SD 카드를 꺼내지 않으면, 복제가 끝났어도, 젯슨 나노에 끼우면 부팅이 안되는 사례가 있었기 때문이다. 
+
+## `apt` 명령으로 설치된 프로그램 찾기
+다음 명령으로, 예를 들어 `program_name`이라는 말이 들어가는 프로그램이 설치되어 있는지를 알 수 있다.
+> apt list --installed | grep program_name
