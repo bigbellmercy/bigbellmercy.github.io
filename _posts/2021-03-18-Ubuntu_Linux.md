@@ -63,6 +63,8 @@ Ubuntu(우분투)는 리눅스(Linux) 운영체제(OS)의 한 종류로서 현�
 ## 파일 지우기
 `rm`(remove) 명령으로 파일을 지운다.
 `rm file`
+그런데, 지우려는 것이 폴더이거나 쓰기 금지가 되어 있을 때는 위 명령은 안 되므로 다음 명령을 쓴다.
+`rm -rf folder`
 
 ## 파일/폴더 속성
 파일과 폴더는 소유자(owner) 속성(property)과 읽기(read)/쓰기(write)/실행(execution) 속성을 갖는다.
