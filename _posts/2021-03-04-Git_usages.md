@@ -34,10 +34,8 @@ categories: Git
 서브모듈이란 git로 버전 관리되는 저장소의 하위 폴더들 중에 별도로 git로 버전 관리가 되는 폴더들을 말한다.
 저장소의 폴더 속에는 역시 Git로 이력 관리되는 서브모듈(submodule)들이 있을 수 있다.
 아래 두 명령들을 실행하면 서브모듈들을 최신으로 갱신할 수 있다.
->git submodule sync --recursive
+>git submodule sync --recursive  
 >git submodule update --init --recursive
->git submodule update --init --recursive
-
 
 # 브랜치 목록 보기
 다음 명령으로 브랜치들의 이름이 나열되며 현재 선택된 브랜치 이름의 왼쪽에 별표(`*`)가 표시된다.
