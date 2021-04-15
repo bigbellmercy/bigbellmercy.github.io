@@ -71,6 +71,12 @@ categories: Git
 아래처럼 한 커밑의 번호 앞 몇 자리를 적으면 그곳으로 이동할 수 있다.
 >git checkout 33caabb
 
+## 강제로 이동하기
+어떤 이유로 브랜치 이동이 안된다면, 다음 명령으로 강제로 이동할 수 있다.
+>sudo git checkout -f <branch_name>  
+또는  
+>sudo git checkout --force <branch_name>
+
 # 현재의 프로그램 수정 상태 보기
 아래 명령으로 현재 브랜치에서 어떤 파일들이 변경되었는지를 알 수 있다.
 >git status
