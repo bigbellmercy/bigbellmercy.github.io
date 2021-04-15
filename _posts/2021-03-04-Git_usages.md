@@ -24,6 +24,12 @@ categories: Git
 >git checkout master 또는 orign   
 >git pull
 
+## 특정 태그가 누락된 경우
+저장소를 최신으로 갱신했는데도, 어떤 이유로 누락된 태그들이 있다면, 다음 명령으로 그 태그들을 받을 수 있다.
+>git fetch --tags  
+또는  
+>git pull --tags
+
 ## 서브모듈을 최신으로 갱신하기
 서브모듈이란 git로 버전 관리되는 저장소의 하위 폴더들 중에 별도로 git로 버전 관리가 되는 폴더들을 말한다.
 저장소의 폴더 속에는 역시 Git로 이력 관리되는 서브모듈(submodule)들이 있을 수 있다.
