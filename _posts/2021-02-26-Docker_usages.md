@@ -42,13 +42,17 @@ Docker[다커/도커]라는 소프트웨어는 우분투(Ubuntu) 등의 리눅�
 
 참고로, 하나의 같은 이미지로 여러 컨테이너들을 따로 실행하는 것이 가능하다.
 
+## Container에 이름을 붙여서 생성하는 방법
+컨테이너에 이름을 붙여서 생성해 놓으면, 나중에 이 이름을 가지고 쉽게 다시 시작할 수 있다.
+>sudo docker run -it --name=<container_name> ubuntu
+
 # Container 종료 명령
 그 컨테이너 속의 터미널에서 `exit` 명령을 그 컨테이너를 종료할 수 있다.
 
 또는, 다른 터미널에서 다음 명령으로 특정 컨테이너를 종료할 수 있다. 여기서, <container_id/name>는 `sudo docker ps` 명령으로 알 수 있으며, id는 앞의 몇 글자만 적어도 된다. 
 `sudo docker stop <container_id/name>`
 
-주의. 종료된 컨테이너는 아예 사라지는 것이 아니라, 그 마지막 환경 그대로 디스크에 남아 있고, 나중에 다시 재개(재실행)하여 이어서 작업할 수 있다. 
+**주의. 종료된 컨테이너는 아예 사라지는 것이 아니라, 그 마지막 환경 그대로 디스크에 남아 있고, 나중에 다시 재개(재실행)하여 이어서 작업할 수 있다.**
 
 # Container 목록 보기 명령
 터미널을 따로 시행한 뒤에 아래 명령을 치면, 현재 실행 중인 컨테이너들의 목록을 불 수 있다.  
@@ -58,8 +62,8 @@ Docker[다커/도커]라는 소프트웨어는 우분투(Ubuntu) 등의 리눅�
 `sudo docker ps -a`
 
 # Container 재개(재실행) 명령
-아래 명령으로 중단(stop)된 컨테이너를 이어서 다시 실행할 수 있다. 여기서, <container_id/name>는 `sudo docker ps -a`로 알 수 있고, id는 앞의 몇 글자만 적어도 된다.
-`sudo docker start -i <container_id/name>`
+아래 명령으로 중단(stop)된 컨테이너를 이어서 다시 실행할 수 있다. 여기서, <container_id/name>는 `sudo docker ps -a`로 알 수 있고, id는 앞의 몇 글자만 적어도 된다. 이때, 앞에서 컨테이너 생성 시에 이름을 붙였다면 id 대신에 쓸 수 있다.  
+`sudo docker start -i <container_id or name>`
 
 # Container 제거 명령
 아래 명령으로 특정 컨테이너를 제거할 수 있다. 여기서, <container_id/name>는 `sudo docker ps -a`로 알 수 있고, id는 앞의 몇 글자만 적어도 된다.
