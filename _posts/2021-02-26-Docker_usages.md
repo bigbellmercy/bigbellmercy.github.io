@@ -171,13 +171,19 @@ Qt GUI가 쓰인 소프트웨어는 연산량이 크므로 문제가 될 때에�
 아래 명령으로 특정 컨테이너를 제거할 수 있다. 여기서, <container_id/name>는 `sudo docker ps -a`로 알 수 있고, id는 앞의 몇 글자만 적어도 된다.
 `docker rm <container_id/name>`
 
-# 도커 이미지 및 컨테이너 사용 용량 확인 방법
+
+# 도커 고급 명령
+
+## 도커 이미지 및 컨테이너 사용 용량 확인 방법
 >docker system df -v
 
-# 컨테이너 밖에서 컨테이너 속에 명령하기
+## 컨테이너 밖에서 컨테이너 속에 명령하기
 만약, 컨테이너 밖의 호스트 환경에서 my_container라는 이름의 컨테이너에서 글 편집기인 gedit를 실행하려면 다음 명령을 쓴다.   
 >docker exec my_container gedit
 
+## 컨테이너를 가지고 이미지 만들기
+아래 명령은 container_id_or_name이라는 id나 이름의 컨테이너로 my_name:my_tag라는 이미지를 만든다. 여기서, 태그 이름은 뺄 수 있다.  
+>docker commit container_id_or_name my_image:my_tag 
 
 # Docker 스크립트 사용 방법
 ## Docker 스크립트의 개념
