@@ -15,26 +15,37 @@ Docker[도커/다커]라는 소프트웨어는 우분투(Ubuntu) 등의 리눅�
 ## Container란
 컴퓨터에 내려 받은 이미지(image)를 가지고 실제로 사용되는 프로그램 실행 환경으로 만든 것. 하나의 이미지로 여러개의 다른 컨테이너들을 만들 수 있고, 그 컨테이너들은 하나의 같은 이미지의 실행 환경에서 비롯되었지만, 사용되면서 실행 환경이 서로 다르게 바뀔 수 있다. 
 
+# Docker 설치 및 사용 준비
+도커(docker)를 설치하는 방법 중의 하나는 다음 두 명령을 실행하는 것이다.  
+curl -fsSL get.docker.com -o get-docker.sh  
+sudo sh get-docker.sh  
+
+만약, 도커를 사용하는 명령들 앞에 sudo를 쓰지 않아도 되게 설정하려면, 다음 두 명령을 실행한다. 따라서, 뒤의 설명에서는 `sudo`를 명령 앞에 붙이는 것을 생략한다.  
+>sudo groupadd docker  
+>sudo usermod -aG docker $USER
+
+운영체제를 로그아웃 한 뒤에 다시 로그인 한다. 
+
 # Image 사용 관련 명령들
 ## Image 검색 명령
 누군가 프로그램 실행 환경을 이미지(image) 파일로 만들어서 인터넷에 올려 놓은 것을 다음의 명령으로 찾을 수 있다. 아래 예는, ubuntu라는 검색어로 이미지를 찾는 명령이다.  
-`sudo docker search ubuntu`
+`docker search ubuntu`
 
 ## Image 설치 명령
 인터넷에서 원하는 이미지를 내 컴퓨터에 받아서 설치하는 명령이다. 아래 예는, ubuntu 이미지를 설치하는 명령이다.  
-`sudo docker pull ubuntu`  
+`docker pull ubuntu`  
 
 위 명령은 태그(tag)(일종의, 버전)를 지정하지 않았기에, 가장 최근(latest)의 버전을 설치한다.  
 아래는 bionic(Ubuntu 18.04) 태그(tage)를 지정하여 설치하는 방법이다.  
-`sudo docker pull ubuntu:bionic`
+`docker pull ubuntu:bionic`
 
 ## 설치된 Image 목록 보기 명령
 아래 명령으로 설치된 이미지들의 목록을 볼 수 있다.  
-`sudo docker images`
+`docker images`
 
 ## 설치된 Image 제거 명령
 아래 명령으로 특정 이미지를 제거할 수 있다.
-`sudo docker rmi <image_name>`
+`docker rmi <image_name>`
 
 
 # Container 사용 관련 명령들
@@ -47,11 +58,11 @@ Docker[도커/다커]라는 소프트웨어는 우분투(Ubuntu) 등의 리눅�
 
 아래 예는, ubuntu라는 이미지를 본뜬(copied) 컨테이너(container)를 하나 만든다. 여기서, -it는 interactive, tty(text)의 옵션인데, 이게 없으면 컨테이너가 만들어졌다가 바로 종료된다. 
 여기서, ubuntu:v1.0 이런식으로 태그를 붙이면 해당 태그의 이미지로 컨테이너가 만들어지고, 태그를 생략하면 최근의 태그가 사용된다.  
->sudo docker run -it ubuntu  
+>docker run -it ubuntu  
 
 또는
 
->sudo docker run -it ubuntu:v1.0  
+>docker run -it ubuntu:v1.0  
 
 여기서, -it 옵션은 컨테이너를 만든 뒤에 터미널 창을 연결하라는 뜻이다.  
 
@@ -67,7 +78,7 @@ Docker[도커/다커]라는 소프트웨어는 우분투(Ubuntu) 등의 리눅�
 
 #### Container에 이름을 붙여서 생성하는 옵션
 컨테이너에 이름을 붙여서 생성해 놓으면, 나중에 이 이름을 가지고 쉽게 다시 시작할 수 있다.
->sudo docker run -it --name=<container_name> ubuntu
+>docker run -it --name=<container_name> ubuntu
 
 #### 외부 폴더를 사용하는 옵션
 하나의 컨테이너는 가상의 독립적인 컴퓨터이기에 컨테이너 밖의 호스트 환경의 폴더는 기본적으로 쓸 수 없다. 
@@ -135,30 +146,30 @@ Qt GUI가 쓰인 소프트웨어는 연산량이 크므로 문제가 될 때에�
 
 #### bash 셸 사용 옵션
 다음처럼 마지막에 bash라고 적으면 컨테이너가 생성된 뒤에 터미널에 bash 셸이 사용된다.
->sudo docker run -it ubuntu bash  
+>docker run -it ubuntu bash  
 
 ## Container 종료 명령
 그 컨테이너 속의 터미널에서 `exit` 명령을 그 컨테이너를 종료할 수 있다.
 
 또는, 다른 터미널에서 다음 명령으로 특정 컨테이너를 종료할 수 있다. 여기서, <container_id/name>는 `sudo docker ps` 명령으로 알 수 있으며, id는 앞의 몇 글자만 적어도 된다. 
-`sudo docker stop <container_id/name>`
+`docker stop <container_id/name>`
 
 **주의. 종료된 컨테이너는 아예 사라지는 것이 아니라, 그 마지막 환경 그대로 디스크에 남아 있고, 나중에 다시 재개(재실행)하여 이어서 작업할 수 있다.**
 
 ## Container 목록 보기 명령
 터미널을 따로 시행한 뒤에 아래 명령을 치면, 현재 실행 중인 컨테이너들의 목록을 불 수 있다.  
-`sudo docker ps`
+`docker ps`
 
 아래 명령은, 현재 실행 중이지는 않지만 중단된 컨테이너들의 목록도 보여 준다.
-`sudo docker ps -a`
+`docker ps -a`
 
 ## Container 재개(재실행) 명령
 아래 명령으로 중단(stop)된 컨테이너를 이어서 다시 실행할 수 있다. 여기서, <container_id/name>는 `sudo docker ps -a`로 알 수 있고, id는 앞의 몇 글자만 적어도 된다. 이때, 앞에서 컨테이너 생성 시에 이름을 붙였다면 id 대신에 쓸 수 있다.  
-`sudo docker start -i <container_id or name>`
+`docker start -i <container_id or name>`
 
 ## Container 제거 명령
 아래 명령으로 특정 컨테이너를 제거할 수 있다. 여기서, <container_id/name>는 `sudo docker ps -a`로 알 수 있고, id는 앞의 몇 글자만 적어도 된다.
-`sudo docker rm <container_id/name>`
+`docker rm <container_id/name>`
 
 # 도커 이미지 및 컨테이너 사용 용량 확인 방법
 >docker system df -v
