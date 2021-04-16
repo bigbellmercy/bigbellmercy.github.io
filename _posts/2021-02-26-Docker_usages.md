@@ -68,3 +68,20 @@ Docker[다커/도커]라는 소프트웨어는 우분투(Ubuntu) 등의 리눅�
 # Container 제거 명령
 아래 명령으로 특정 컨테이너를 제거할 수 있다. 여기서, <container_id/name>는 `sudo docker ps -a`로 알 수 있고, id는 앞의 몇 글자만 적어도 된다.
 `sudo docker rm <container_id/name>`
+
+# Docker 스크립트 사용
+## Docker 스크립트의 개념
+한 소프트웨어 환경에 소프트웨어들을 설치하는 명령들을 담은 스크립트 파일을 작성한 뒤에, 이 스크립트 파일을 가지고 이미지를 만들 수도 있다. 이렇게 하면, 설치되는 소프트웨어의 일부를 바꾸어서 다시 이미지를 만들어야 할 때에, 이 일을 자동화할 수 있어서 편리하다.
+
+## Dockerfile 빌드 명령
+설치 스크립트를 Dockerfile이라는 글 파일로 저장하였다면 이를 가지고 도커 이미지를 만드는 명령은 다음과 같다.
+>docker build - < Dockerfile
+
+## Dockerfile 작성 방법
+다른 도커 이미지를 기반으로 이미지를 만든다면, 다음처럼 첫 줄에 적는다.
+>FROM ros:foxy-ros-base  
+
+그 뒤에 설치를 위해 필요한 각종 명령들을 다음의 예처럼 RUN 다음에 적는다.
+>RUN apt-get update  
+
+이 글 파일을 Dockerfile이라는 이름으로 저장한다.
