@@ -5,7 +5,7 @@ categories: Docker
 ---
 
 # Docker란?
-Docker[다커/도커]라는 소프트웨어는 우분투(Ubuntu) 등의 리눅스 운영체제(OS)에서, 소프트웨어 프로그램들의 실행 환경들을 저장해 두었다가 다시 사용함으로써,
+Docker[도커/다커]라는 소프트웨어는 우분투(Ubuntu) 등의 리눅스 운영체제(OS)에서, 소프트웨어 프로그램들의 실행 환경들을 저장해 두었다가 다시 사용함으로써,
 매번 프로그램 실행 환경들을 다시 설치 및 설정할 필요 없이, 원하는 실행 환경으로 바로 바꿀 수 있는 기술을 가진 컨테이너(container) 소프트웨어이다. 
 
 # Image란?
@@ -131,6 +131,9 @@ Qt GUI가 쓰인 소프트웨어는 연산량이 크므로 문제가 될 때에�
 # Container 제거 명령
 아래 명령으로 특정 컨테이너를 제거할 수 있다. 여기서, <container_id/name>는 `sudo docker ps -a`로 알 수 있고, id는 앞의 몇 글자만 적어도 된다.
 `sudo docker rm <container_id/name>`
+
+# 도커 이미지 및 컨테이너 사용 용량 확인 방법
+>docker system df -v
 
 # Docker 스크립트 사용
 ## Docker 스크립트의 개념
