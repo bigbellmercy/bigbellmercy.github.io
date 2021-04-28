@@ -165,3 +165,7 @@ drwxr-xr-x  9 user user         4096 Feb  2 14:59  Documents
 ## Ubuntu Kernel 버전 알기
 다음 버전으로 우분투 커넬 버전을 알 수 있다.
 > uname -r
+
+# 이미지 파일 보는 명령
+검색어 image viewer로 찾아 앱을 실행하거나, 터미널에서 다음처럼 명령을 내린다.  
+> eog image.file
