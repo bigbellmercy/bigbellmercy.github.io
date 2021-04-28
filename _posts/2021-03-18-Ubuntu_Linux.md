@@ -167,5 +167,5 @@ drwxr-xr-x  9 user user         4096 Feb  2 14:59  Documents
 > uname -r
 
 # 이미지 파일 보는 명령
-검색어 image viewer로 찾아 앱을 실행하거나, 터미널에서 다음처럼 명령을 내린다. 참고로, ego는 Eye of GNOME의 약자다.  
+검색어 image viewer로 찾아 앱을 실행하거나, 터미널에서 다음처럼 명령을 내린다. 참고로, eog는 Eye of GNOME의 약자다.  
 > eog image.file
