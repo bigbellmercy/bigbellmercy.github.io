@@ -72,10 +72,11 @@ ROS 사이에 시각 동기화가 잘 되어야 하므로 다음처럼 설정한
 > sudo apt install chrony
 
 시각 동기화 서버(보통 인터넷이 연결되는 컴퓨터)에서 `/etc/chrony/chrony.conf` 파일을 다음처럼 수정한다.  
+여기서, `allow` 뒤에는 두 컴퓨터가 속한 네트워크의 IP 세 자리 앞 주소이고, `allow`문을 여러 개 적을 수 있다.  
 ```
 local stratum 8
 manual
-allow 172.30.1
+allow 192.168.1
 smoothtime 400 0.01
 ```
 
