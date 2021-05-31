@@ -72,7 +72,9 @@ categories: Git
 >git checkout 33caabb
 
 ## 강제로 이동하기
-어떤 이유로 브랜치 이동이 안된다면, 다음 명령으로 강제로 이동할 수 있다.
+*주의: 강제 이동 시 나중에 설정 오류로 정상 복구 어려울 수 있음*  
+어떤 이유로 브랜치 이동이 안된다면, 다음 명령으로 강제로 이동할 수 있다.  
+그러나, 설정 등이 잘못 되면, 되돌리기가 어려워지므로, 왠만하면 쓰지 말아야 한다.  
 >sudo git checkout -f <branch_name>  
 또는  
 >sudo git checkout --force <branch_name>
