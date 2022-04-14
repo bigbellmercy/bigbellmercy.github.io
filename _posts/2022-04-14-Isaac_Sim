@@ -13,4 +13,24 @@ NVIDIA 사의 '디지털 트윈'(digital twin)을 위한 컴퓨터 시뮬레이�
 - 아마존 AWS 상에서 실행되는, Isaac Sim의 설치가 가능한 Ubuntu 18.04 이미지가 AWS에 제공됨.
 
 # 아마존 AWS 상에서 실행 방법
-1. 
+## AWS 인스턴스 생성
+참고 자료 1을 참고할 것.
+1. EC2 화면에서 Launch Instances를 누르고 검색란에서 IsaacSim으로 찾아, 최근의 것을 고른다.
+2. Instance Type으로는 NVIDIA GPU가 장착된 g4dn에서 하나를 고른다.
+3. Security에서 기존 규칙(rule)을 지우고, 새 규칙을 만들어 All trafic을 고르고, My IP를 골라,
+ 내 컴퓨터만 접속하게 한다.
+4. 만들어 둔 PEM Key를 고르고, 계속 진행하여, Launch를 누른다.
+5. 만들어진 인스탄스를 고르고 Connect를 눌러 SSH 탭의 마지막 줄에서 ssh 접속 명령을 사한다.
+6. 윈도우나 리눅스로 된 사용자 컴퓨터에서 명령창을 하나 띄우고,
+7. 명령창에서 cd 명령으로 PEM key 파일이 있는 경로로 이동한다.
+8. 앞에서 복사된 명령을 붙여넣고 실행하여 가상 컴퓨터에 ssh로 접속한다.
+ 
+## Isaac Sim 설치
+참고 자료 2대로 설치한다.
+
+## Isaac Sim 재실행
+
+# 참고 자료
+상기 내용은 아래의 내용을 기반으로 작성되었음
+1. https://docs.omniverse.nvidia.com/app_isaacsim/app_isaacsim/install_advanced_cloud_setup_aws.html#isaac-sim-setup-aws-requirements
+2. https://docs.omniverse.nvidia.com/app_isaacsim/app_isaacsim/install_advanced.html#isaac-sim-setup-remote-headless-container
