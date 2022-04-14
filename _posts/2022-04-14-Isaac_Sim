@@ -1,0 +1,16 @@
+---
+title: "Isaac Sim 사용법"
+date: 2022-4-14 17:57:00 +09:00
+categories: Digital_Twin
+---
+
+# 목적
+NVIDIA 사의 '디지털 트윈'(digital twin)을 위한 컴퓨터 시뮬레이션 소프트웨어인 Isaac Sim의 사용법을 설명합니다.
+
+# 실행 환경 요건
+- 3D 그래픽 처리가 많이 쓰이기에, 컴퓨터에 NVIDIA사의 고성능 GPU(Graphic Processing Unit) 카드가 설치되어 있어야 함.
+- 운영체제는 윈도우와, 리눅스 각각 쓸 수 있고, AWS와 같은 클라우드 컴퓨팅 환경에서도 실행 가능함.
+- 아마존 AWS 상에서 실행되는, Isaac Sim의 설치가 가능한 Ubuntu 18.04 이미지가 AWS에 제공됨.
+
+# 아마존 AWS 상에서 실행 방법
+1. 
