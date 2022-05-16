@@ -15,4 +15,6 @@ categories: Container
 ```
 singularity shell --fakeroot --writable --nv --no-home --bind /container_outside_folder/:/container_inside_folder /container_image_file.sif"
 ```
-여기서, `--bind` 옵션을 써서, 컨테이너 밖의 호스트 컴퓨터의 '/container_outside_folder' 폴더가, 컨테이너 속의 '/container_inside_folder'에 연결되어, 파일 공유가 가능해진다.
+여기서, 'shell'은 컨테이너 속에서 처음으로 셸(shell)(리눅스 명령줄(command line)이 실행되는 소프트웨어)을 실행하는 명령이고, 이로써, 컨테이너 인스턴스(instance)(사례)가 만들어 진 뒤에 셸 창이 나타난다.
+
+`--bind` 옵션을 썼으므로, 컨테이너 밖의 호스트 컴퓨터의 '/container_outside_folder' 폴더가, 컨테이너 속의 '/container_inside_folder'에 연결되어, 파일 공유가 가능해진다.
