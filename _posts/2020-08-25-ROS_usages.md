@@ -87,3 +87,15 @@ smoothtime 400 0.01
 server 192.168.1.100 iburst
 makestep 1 -1
 ```
+
+# 명령줄에서 메시지 보내기
+명령줄(command line)에서 `rostopic` 명령으로 토픽 메시지를 내보낼 수 있다.   
+다음 명령은 hello라는 글 메시지를 /my_topic이란 화제로 내보낸다.
+```
+rostopic pub /my_topic std_msgs/String "hello"
+```
+   
+다음 명령은 /aaa라는 화제(topic)로 geometry_msgs/PoseStamped라는 형식의 메시지를 내보내는 예제이다.   
+```
+rostopic pub /aaa geometry_msgs/PoseStamped '{header: {seq: 0, stamp: {secs: 0, nsecs: 0}}, pose: {position: {x: 0, y: 1, z: 2}, orientation: {x: 0, y: 0, z: 0, w: 1} } }'
+```
