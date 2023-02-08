@@ -141,6 +141,13 @@ drwxr-xr-x  9 user user         4096 Feb  2 14:59  Documents
 압축 명령인 `xz`(또는 `gzip`)은 파일들을 압축할 수는 있지만, 폴더를 압축할 수는 없기에, 먼저 `tar` 명령을 써서 폴더들의 파일들을 하나로 묶어 주어야 한다. 따라서, 다음처럼 `foo`라는 폴더를 압축할 수 있다. 
 > tar -cf - foo/ | xz -9 -c - > foo.tar.xz 
 
+# 한글 입력 기능 설정
+1. 설정(settings)에서 Region & Language를 누르고, 혹시 창이 스스로 뜨면 설치(install)한다고 함.
+2. Manage Installed Languages를 누르고, Install/Remove Languages를 누르고, Korean을 체크하여 Apply 함.
+3. 컴퓨터를 재시동하고, 터미널에서 ibus-setup을 실행하고, Add를 눌러 Korean의 Hangul을 골라 Add함.
+4. 컴퓨터를 재시동하고, Shift + Space 키를 누르면 한-영 전환이 되고, 필요하면, Hangule 옆의 톱니 아이콘에서 변환키 변경 가능함.
+
+ 
 # Ubuntu 고급 사용
 좀 더 어려운 사용법은 다음과 같습니다.
 
