@@ -104,6 +104,10 @@ drwxr-xr-x  9 user user         4096 Feb  2 14:59  Documents
 ## 파일/폴더 속성 바꾸기
 `chmod` 
 
+## 관리자 모드로 명령 실행
+터미널에서 관리자(superuser, administrator) 
+`sudo <명령>`
+ 
 # 글 편집기
 내장된 `gedit` 프로그램을 쓰면 글(text) 파일을 편집할 수 있다. 
 
