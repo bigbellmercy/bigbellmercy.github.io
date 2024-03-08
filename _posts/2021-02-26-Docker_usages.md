@@ -177,6 +177,9 @@ Qt GUI가 쓰인 소프트웨어는 연산량이 크므로 문제가 될 때에�
 아래 명령으로 특정 컨테이너를 제거할 수 있다. 여기서, <container_id/name>는 `sudo docker ps -a`로 알 수 있고, id는 앞의 몇 글자만 적어도 된다.
 `docker rm <container_id/name>`
 
+## Container 재시동 명령
+컨테이너 속 Ubuntu를 재시동(reboot)하고 싶으면, 컨테이너에서 exit 명령으로 나온 뒤에, 아래 명령을 한다.
+docker restart <container_name>
 
 # 도커 고급 명령
 
