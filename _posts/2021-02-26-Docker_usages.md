@@ -44,9 +44,10 @@ sudo sh get-docker.sh
 `docker images`
 
 ## 설치된 Image 제거 명령
-아래 명령으로 특정 이미지를 제거할 수 있다.
+아래 명령으로 특정 이미지를 제거할 수 있다.  
 `docker rmi <image_name>`
 
+단, 그 이미지를 쓰는 컨테이너가 있다면 지울 수 없다.
 
 # Container 사용 관련 명령들
 
