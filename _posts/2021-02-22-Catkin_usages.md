@@ -30,3 +30,9 @@ https://robotics.stackexchange.com/questions/16604/ros-catkin-make-vs-catkin-bui
 
 http://wiki.ros.org/melodic/Installation/Source#Update_the_workspace
 
+# 빌드한 것을 모두 지우고 처음부터 다시 빌드하기
+다음 명령으로 빌드한 내용이 모두 초기화된다.  
+>catkin clean
+
+다음 명령으로 다시 빌드가 이루어진다.  
+>catkin build
