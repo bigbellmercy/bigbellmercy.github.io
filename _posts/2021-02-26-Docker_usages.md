@@ -211,11 +211,14 @@ Qt GUI가 쓰인 소프트웨어는 연산량이 크므로 문제가 될 때에�
 >docker exec my_container gedit
 
 ## 컨테이너를 가지고 이미지 만들기
-아래 명령은 container_id_or_name이라는 id나 이름의 컨테이너로 my_name:my_tag라는 이미지를 만든다. 여기서, 태그 이름은 뺄 수 있다.  
->docker commit container_id_or_name my_image:my_tag 
+아래 명령은 container_id_or_name이라는 id나 이름의 컨테이너로 my_name:my_tag라는 이미지를 만든다. 여기서, 태그 이름인 :<tag_name>은 뺄 수 있다.  
+>docker commit <container_id_or_name> <image_name>:<tag_name> 
+참고로, 태그 이름을 이미 있던 latest를 붙여도 commit이 되었고, 대신에 image의 ID가 바뀌었다.  
+commit 시의 설명 메시지를 추가하려면 다음과 같이 적는다.  
+>docker commit -m "commit message" <container_id_or_name> <image_name>:<tag_name> 
 
 **참고**
-이렇게 한 이미지로부터 생성된 컨테이너로 새 이미지를 만들었어도, 이 두 이미지들이 차지하는 용량이 원래보다 두 배가 되지는 않고, 이미지를 공유하는 부분은 그대로 두고 차이가 나는 부분만 새 이미지에 저장된다.   
+이렇게 한 이미지로부터 생성된 컨테이너로 새 이미지를 만들었어도, 이 두 이미지들이 차지하는 용량이 원래보다 두 배가 되지는 않고, 이미지를 공유하는 부분은 그대로 두고 차이가 나는 부분만 새 이미지에 저장된다. 그러나 docker images 명령을 하면 각 이미지의 크기는 공유하는 부분을 모두 포함해서 용량 크기를 보여준다.
 
 # Docker 스크립트 사용 방법
 ## Docker 스크립트의 개념
