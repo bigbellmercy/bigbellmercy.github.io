@@ -211,7 +211,7 @@ Qt GUI가 쓰인 소프트웨어는 연산량이 크므로 문제가 될 때에�
 >docker exec my_container gedit
 
 ## 컨테이너를 가지고 이미지 만들기
-아래 명령은 container_id_or_name이라는 id나 이름의 컨테이너로 my_name:my_tag라는 이미지를 만든다. 여기서, 태그 이름인 :<tag_name>은 뺄 수 있다.  
+아래 명령은 <container_id_or_name>이라는 id나 이름의 컨테이너로 <image_name>:<tag_name>라는 이미지를 만든다. 여기서, 태그 이름인 :<tag_name>은 뺄 수 있다.  
 >docker commit <container_id_or_name> <image_name>:<tag_name> 
 
 참고로, 태그 이름으로서, 이미 있던 latest를 붙여도 commit이 되었고, 대신에 image의 ID가 바뀌었다.  
