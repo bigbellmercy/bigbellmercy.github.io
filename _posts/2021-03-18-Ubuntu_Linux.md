@@ -158,7 +158,11 @@ drwxr-xr-x  9 user user         4096 Feb  2 14:59  Documents
 2. Manage Installed Languages를 누르고, Install/Remove Languages를 누르고, Korean을 체크하여 Apply 함.
 3. 컴퓨터를 재시동하고, 터미널에서 ibus-setup을 실행하고, Add를 눌러 Korean의 Hangul을 골라 Add함.
 4. 컴퓨터를 재시동하고, Shift + Space 키를 누르면 한-영 전환이 되고, 필요하면, Hangule 옆의 톱니 아이콘에서 변환키 변경 가능함.
- 
+
+# USB 메모리 포맷하기
+1. 탐색기에서 포맷하려는 USB 메모리를 고르고 오른쪽 단추를 눌러서 format 명령을 실행한다.
+2. 포맷 형식으로 NTFS를 선택하면 수 GB의 대용량의 파일도 USB 메모리에 저장할 수 있게 되고, 윈도우(Windows)에서도 복사하여 쓸 수 있다. 그러나, FAT로 포맷하면 대용량의 파일이 너무 커서 복사가 안될 수 있다.  
+
 # Ubuntu 고급 사용
 좀 더 어려운 사용법은 다음과 같습니다.
 
