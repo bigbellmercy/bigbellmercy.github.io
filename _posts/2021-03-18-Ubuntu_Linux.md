@@ -156,8 +156,9 @@ drwxr-xr-x  9 user user         4096 Feb  2 14:59  Documents
 # 한글 입력 기능 설정
 1. 설정(settings)에서 Region & Language를 누르고, 혹시 창이 스스로 뜨면 설치(install)한다고 함.
 2. Manage Installed Languages를 누르고, Install/Remove Languages를 누르고, Korean을 체크하여 Apply 함.
-3. 컴퓨터를 재시동하고, 터미널에서 ibus-setup을 실행하고, Add를 눌러 Korean의 Hangul을 골라 Add함.
-4. 컴퓨터를 재시동하고, Shift + Space 키를 누르면 한-영 전환이 되고, 필요하면, Hangule 옆의 톱니 아이콘에서 변환키 변경 가능함.
+3. 컴퓨터를 재시동하고, 터미널에서 ibus-setup을 실행하고, Input Method에서 Add를 눌러 Korean의 Hangul을 골라 Add함.
+4. 다시, Region & Language로 가서 Input Sources에서 +를 눌러서 Korean (Hangul)을 추가함.
+5. 컴퓨터를 재시동하고, 화면 맨 윗줄의 'en'을 누르고 Korean (Hangul)'을 고른 뒤에, Shift + Space 키나 '한/영' 키를 누르면 한-영 전환이 됨.
 
 # USB 메모리 포맷하기
 1. 탐색기에서 포맷하려는 USB 메모리를 고르고 오른쪽 단추를 눌러서 Format 명령을 실행한다.
